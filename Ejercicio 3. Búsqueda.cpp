@@ -88,9 +88,9 @@ int main (){
 		}
 	}
 	durAvg = durAvg*1000; durMin = durMin*1000; durMax = durMax*1000;
-	printf("Duracion promedio de Busqueda Secuencial: %lf milisegundos\n", durAvg/10000);
-	printf("Duracion minima de Busqueda Secuencial: %lf milisegundos\n", durMin);
-	printf("Duracion maxima de Busqueda Secuencial: %lf milisegundos\n", durMax);
+	printf("Duracion promedio de Busqueda Binaria: %lf milisegundos\n", durAvg/10000);
+	printf("Duracion minima de Busqueda Binaria: %lf milisegundos\n", durMin);
+	printf("Duracion maxima de Busqueda Binaria: %lf milisegundos\n", durMax);
 	printf("----------------------\n"); //*/
 	
 	return 0;
