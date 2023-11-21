@@ -90,10 +90,58 @@ int main(){
 		}
 	}
 	durAvg = durAvg*1000; durMin = durMin*1000; durMax = durMax*1000;
-	printf("Duracion de Bubble sort: %lf milisgundos\n", duracion*1000);
+	printf("Duracion promedio de Bubble sort: %lf milisgundos\n", dur/10000);
+	printf("Duracion minima de Bubble sort: %lf milisgundos\n", durMin);
+	printf("Duracion maxima de Bubble sort: %lf milisgundos\n", durMax);
+	printf("----------------------\n");
 	
-	insert(arreglo, size);
-	quick(arreglo, size - 1, 0);
+	durAvg = 0; durMax = 0; durMin = 0;
+	for(int c = 0; c < size; c++){
+		clock_t tic = clock();
+		insert(arreglo, size);
+		clock_t toc = clock();
+		durAvg += (double)(toc - tic) / CLOCKS_PER_SEC;
+		dur = (double)(toc - tic) / CLOCKS_PER_SEC;
+		if(c == 0){
+			durMin = dur;
+			durMax = dur;
+		}
+		if(durMin > dur){
+			durMin = dur;
+		}
+		if(durMax < dur){
+			durMax = dur;
+		}
+	}
+	durAvg = durAvg*1000; durMin = durMin*1000; durMax = durMax*1000;
+	printf("Duracion promedio de Insertion sort: %lf milisgundos\n", dur/10000);
+	printf("Duracion minima de Insertion sort: %lf milisgundos\n", durMin);
+	printf("Duracion maxima de Insertion sort: %lf milisgundos\n", durMax);
+	printf("----------------------\n");
+	
+	durAvg = 0; durMax = 0; durMin = 0;
+	for(int c = 0; c < size; c++){
+		clock_t tic = clock();
+		quick(arreglo, size - 1, 0);
+		clock_t toc = clock();
+		durAvg += (double)(toc - tic) / CLOCKS_PER_SEC;
+		dur = (double)(toc - tic) / CLOCKS_PER_SEC;
+		if(c == 0){
+			durMin = dur;
+			durMax = dur;
+		}
+		if(durMin > dur){
+			durMin = dur;
+		}
+		if(durMax < dur){
+			durMax = dur;
+		}
+	}
+	durAvg = durAvg*1000; durMin = durMin*1000; durMax = durMax*1000;
+	printf("Duracion promedio de Quick sort: %lf milisgundos\n", dur/10000);
+	printf("Duracion minima de Quick sort: %lf milisgundos\n", durMin);
+	printf("Duracion maxima de Quick sort: %lf milisgundos\n", durMax);
+	printf("----------------------\n");
 	
 	return 0;
 }
