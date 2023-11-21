@@ -90,7 +90,7 @@ int main(){
 		}
 	}
 	durAvg = durAvg*1000; durMin = durMin*1000; durMax = durMax*1000;
-	printf("Duracion promedio de Bubble sort: %lf milisgundos\n", dur/10000);
+	printf("Duracion promedio de Bubble sort: %lf milisgundos\n", durAvg/10000);
 	printf("Duracion minima de Bubble sort: %lf milisgundos\n", durMin);
 	printf("Duracion maxima de Bubble sort: %lf milisgundos\n", durMax);
 	printf("----------------------\n");
@@ -114,7 +114,7 @@ int main(){
 		}
 	}
 	durAvg = durAvg*1000; durMin = durMin*1000; durMax = durMax*1000;
-	printf("Duracion promedio de Insertion sort: %lf milisgundos\n", dur/10000);
+	printf("Duracion promedio de Insertion sort: %lf milisgundos\n", durAvg/10000);
 	printf("Duracion minima de Insertion sort: %lf milisgundos\n", durMin);
 	printf("Duracion maxima de Insertion sort: %lf milisgundos\n", durMax);
 	printf("----------------------\n");
@@ -138,7 +138,7 @@ int main(){
 		}
 	}
 	durAvg = durAvg*1000; durMin = durMin*1000; durMax = durMax*1000;
-	printf("Duracion promedio de Quick sort: %lf milisgundos\n", dur/10000);
+	printf("Duracion promedio de Quick sort: %lf milisgundos\n", durAvg/10000);
 	printf("Duracion minima de Quick sort: %lf milisgundos\n", durMin);
 	printf("Duracion maxima de Quick sort: %lf milisgundos\n", durMax);
 	printf("----------------------\n");
